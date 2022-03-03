@@ -1,11 +1,6 @@
 *, ::after, ::before{
     box-sizing: border-box;
 }
-@font-face {
-    font-family: 'Police-primary';
-    src: url('font/Raleway-VariableFont_wght.ttf') format('ttf'),
-  
-}
 
 /* VAR */
 :root{
@@ -26,6 +21,7 @@ body{
 
 body{
     width: 100%;
+    font-family: 'Raleway', sans-serif;
 }
 header,main, .container-footer{
     max-width: 1600px;
@@ -48,19 +44,31 @@ header p {
     color: var(--color-thirdly);
 }
 h1, h2, h3{
-    font-family: 'Police-primary';
+    font-family: 'Raleway', sans-serif;
 }
 h1{
-    font-size: calc(35px * var(--res));
+    font-size: 25px;
 }
 h2{
-    font-size: calc(25px * var(--res));
+    font-size: 25px;
 }
 h3{
     font-size: 20px;
 }
 a{
     text-decoration: none;
+}
+a:hover{
+   color: var(--colo-primary);
+}
+.link-home{
+    margin-left: 45px;
+    font-weight: bold;
+    color: #000;
+    font-size: 19px;
+}
+.d-flex{
+  display: flex;  
 }
 .container{
     padding-left: 20px;
@@ -93,7 +101,11 @@ a{
     }
     .logo{
         width: 80px;
-        margin-top: 30px;
+        margin-top: 11px;
+    }
+    .bloc-slogent{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 /* END NAV */
 
@@ -102,10 +114,13 @@ a{
         margin-top: 15px;
         width: 100%;
         position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .search{
-        width: 40%;
+        width: 100%;
         position: relative;
+        max-width: 412px;
     }
     .search span{
         background-color: var(--color-thirdly-clearer);
@@ -151,7 +166,9 @@ a{
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: center;
-        margin: 50px 0 50px 0 ;
+        margin-top:50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .filter span{
         font-weight: bolder;
@@ -166,6 +183,9 @@ a{
         padding-left: 9px;
         border: 1px solid var(--color-thirdly);
         margin: 0 20px 0 20px ;
+    }
+    .one-filter:hover {
+        background: var(--color-primary-clearer);
     }
     .one-filter span:nth-child(1){
         background-color: var(--color-primary-clearer);
@@ -183,6 +203,14 @@ a{
         color: var(--colo-primary);
         margin: 10px;
         font-size: 20px;
+    }
+    .filter .nb-result{
+        width: 100%;
+        margin-top: 50px;
+        font-size: 18px;
+    }
+    .nb-result i{
+        margin-right:15px;
     }
 /* END FILTER */
   
@@ -287,18 +315,6 @@ a{
 
 /* End CARD V3*/   
    
-    
-
-
-   
-    
-    
- 
-   
-  
-  
-  
-
 /* FIN CARD */
 
 /* PAGE */
@@ -357,10 +373,11 @@ a{
     .flex-footer{
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
     }
     .flex-footer div{
         width: 100%;
-        max-width: 350px;
+        max-width: 400px;
         height: 300px;
         padding: 50px;
     }
@@ -369,6 +386,7 @@ a{
     }
     .flex-footer div ul{
        list-style: none;
+       line-height: 30px;
     }
 
     .bloc-activite {
@@ -395,35 +413,40 @@ a{
     .card-v3 .card-image img {
      height: 200px;
     }
+       /* PAGE */
+        /* HOME */     
+        .container-home .bloc-right,
+        .container-home .bloc-left{
+            width: 98%;
+        }
+    /* END HOME */
+/* PAGE */
 }
-
 @media screen and (max-width: 992px) {
-    body {
-        background-color: blue;
-    }
     .card , .card-v2{
         width: 100%;
         max-width: 500px;
     }
     .card .card-image,
     .card .card-image img ,
+    .card-v3 .card-image,
+    .card-v3 .card-image img{
+      height: 200px;
+    }
     .card-v2 .card-image,
     .card-v2 .card-image img{
-      height: 150px;
+        height: 225px;
+        width: 220px;
     }
-
-    /* PAGE */
-        /* HOME */     
-            .container-home .bloc-right,
-            .container-home .bloc-left{
-                width: 98%;
-            }
-        /* END HOME */
-    /* PAGE */
+ 
 }
 @media screen and (max-width: 768px) {
-    body { 
-        background-color: red;
+    .card, .card-v2, .card-v3{
+        max-width: none;
+    }
+    .container-activiter{
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .container-nav .content-logo {
         width: 100%;
